@@ -1,6 +1,6 @@
 package com.shanshui.smartcommunity.property.controller
 
-
+import com.shanshui.smartcommunity.property.client.PropertyClient
 import com.shanshui.smartcommunity.property.service.PropertyService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.SpringApplication
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping('/api/v1/property')
 @EnableAutoConfiguration
 @EnableCaching
-class PropertyController {
+class PropertyController implements PropertyClient{
 
     @Autowired
     PropertyService propertyService
