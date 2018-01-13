@@ -39,6 +39,8 @@ class Order implements Serializable {
     @Column(updatable = true, insertable = true)
     long assignee
 
+    long community
+
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     OrderServiceRate rate
 

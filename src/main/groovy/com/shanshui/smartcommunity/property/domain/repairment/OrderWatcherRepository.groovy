@@ -8,7 +8,7 @@ import org.springframework.data.repository.CrudRepository
  */
 public interface OrderWatcherRepository extends CrudRepository<OrderWatcher, Long> {
 
-    @Query('select r from OrderWatcher r where r.order = ?1')
+    @Query('select r from OrderWatcher r where r.order.id = ?1')
     List<OrderWatcher> findAll(long oid)
 
     @Query('select r from OrderWatcher r where r.watcher = ?1')
