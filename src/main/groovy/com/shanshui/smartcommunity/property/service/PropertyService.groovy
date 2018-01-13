@@ -31,8 +31,8 @@ class PropertyService {
         status ? orderRepository.findOrdersByStatus(uid, status.name) : null
     }
 
-    def assignOrder(long uid){
-
+    def assignOrder(long oid, long uid) {
+        orderRepository.assignOrder(oid, uid)
     }
     private static final Logger LOGGER = LoggerFactory.getLogger(PropertyService.class)
 }
