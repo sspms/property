@@ -13,6 +13,7 @@ class Feedback implements Serializable {
     @GeneratedValue
     Long id
     long community
+    String title
     String content
     long submitter
     Date date
